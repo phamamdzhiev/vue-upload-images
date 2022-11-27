@@ -15,6 +15,7 @@ export default {
     maxError: String,
     fileError: String,
     clearAll: String,
+    initialMsg: String
   },
   methods: {
     dragOver() {
@@ -224,7 +225,7 @@ export default {
       </svg>
 
       <p class="mainMessage">
-        {{ uploadMsg ? uploadMsg : "Click to upload or drop your images here" }}
+        {{ uploadMsg ? uploadMsg : this.initialMsg }}
       </p>
     </div>
     <div class="imgsPreview" v-show="Imgs.length > 0">
